@@ -1,7 +1,4 @@
 # app.py (Updated with Button Navigation and Drone Theme Banner)
-from pages.costEstimation_page import render_cost_estimation
-from pages.dashboard_page import render_dashboard
-
 import streamlit as st
 from aero_utils import (
     load_models,
