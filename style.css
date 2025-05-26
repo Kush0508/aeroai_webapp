@@ -1,5 +1,5 @@
 /* GLOBAL DARK THEME */
-html, body, [data-testid="stAppViewContainer"] {
+html, body {
     background-color: #0F172A !important;
     color: #E2E8F0 !important;
 }
@@ -15,7 +15,7 @@ html, body, [data-testid="stAppViewContainer"] {
     border-radius: 0.5rem;
     padding: 0.75rem 1.25rem;
     border: none;
-    background-color: #22C55E !important; /* Green button */
+    background-color: #22C55E !important;
     color: black !important;
     width: 100%;
     text-align: center;
@@ -27,79 +27,42 @@ html, body, [data-testid="stAppViewContainer"] {
 
 /* HEADERS & TEXT */
 h1, h2, h3, h4 {
-    color: #22D3EE; /* Cyan */
+    color: #22D3EE;
 }
 p, span, div {
-    color: #CBD5E1; /* Light gray */
+    color: #CBD5E1;
 }
 
 /* --- MODIFICATION START --- */
-/* Target the radio button container */
-[data-testid="stSidebar"] .stRadio > label {
-    margin-bottom: 0.5rem; /* Space between radio options */
-    display: flex; /* Allow content to align */
-    align-items: center; /* Vertically align text and dot */
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Hide the native radio button dot */
-[data-testid="stSidebar"] .stRadio > label > div:first-child {
-    display: none;
-}
-
-/* Style the text label of the radio button */
-[data-testid="stSidebar"] .stRadio > label > div:nth-child(2) {
-    display: block; /* Make it a block element */
-    width: 100%;
-    text-align: left;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.75rem 1.25rem;
-    font-size: 15px;
-    font-weight: 600;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    background-color: #1E293B; /* Default button background */
-    color: #E2E8F0; /* Default text color */
-}
-
-/* Hover effect for radio button labels */
-[data-testid="stSidebar"] .stRadio > label:hover > div:nth-child(2) {
-    background-color: #334155; /* Darker on hover */
-    color: white;
-}
-
-/* Style for the SELECTED radio button */
-[data-testid="stSidebar"] .stRadio > label[data-testid="stRadioInline-0-input"]:has(input:checked) > div:nth-child(2) {
-    background-color: #22D3EE; /* Cyan for selected */
-    color: black;
-}
-[data-testid="stSidebar"] .stRadio > label[data-testid="stRadioInline-1-input"]:has(input:checked) > div:nth-child(2) {
-    background-color: #3B82F6; /* Blue for Upload Media */
-    color: white;
-}
-[data-testid="stSidebar"] .stRadio > label[data-testid="stRadioInline-2-input"]:has(input:checked) > div:nth-child(2) {
-    background-color: #F59E0B; /* Amber for Combined Result */
-    color: black;
-}
-[data-testid="stSidebar"] .stRadio > label[data-testid="stRadioInline-3-input"]:has(input:checked) > div:nth-child(2) {
-    background-color: #6366F1; /* Indigo for Dashboard */
-    color: white;
-}
-[data-testid="stSidebar"] .stRadio > label[data-testid="stRadioInline-4-input"]:has(input:checked) > div:nth-child(2) {
-    background-color: #F43F5E; /* Rose for Cost Estimation */
-    color: white;
-}
-
-/* Remove margin from the stRadio group to align with other elements */
-[data-testid="stSidebar"] .stRadio {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* Ensure the Streamlit button at the bottom aligns */
-[data-testid="stSidebar"] .stButton {
-    margin-top: 1rem; /* Adjust as needed */
-}
-
+/* (Radio styles kept if you ever switch back) */
 /* --- MODIFICATION END --- */
+/* SIDEBAR BUTTON GRADIENTS */
+[data-testid="stSidebar"] .stButton:nth-of-type(1) > button {
+    background: linear-gradient(90deg, #8E2DE2 0%, #4A00E0 100%) !important;
+    color: white !important;
+}
+[data-testid="stSidebar"] .stButton:nth-of-type(2) > button {
+    background: linear-gradient(90deg, #2193B0 0%, #6DD5ED 100%) !important;
+    color: white !important;
+}
+[data-testid="stSidebar"] .stButton:nth-of-type(3) > button {
+    background: linear-gradient(90deg, #CC2B5E 0%, #753A88 100%) !important;
+    color: white !important;
+}
+[data-testid="stSidebar"] .stButton:nth-of-type(4) > button {
+    background: linear-gradient(90deg, #F7971E 0%, #FFD200 100%) !important;
+    color: black !important;
+}
+[data-testid="stSidebar"] .stButton:nth-of-type(5) > button {
+    background: linear-gradient(90deg, #12C2E9 0%, #C471ED 100%) !important;
+    color: white !important;
+}
+
+/* Optional: Add hover brightness boost */
+[data-testid="stSidebar"] .stButton:nth-of-type(1) > button:hover,
+[data-testid="stSidebar"] .stButton:nth-of-type(2) > button:hover,
+[data-testid="stSidebar"] .stButton:nth-of-type(3) > button:hover,
+[data-testid="stSidebar"] .stButton:nth-of-type(4) > button:hover,
+[data-testid="stSidebar"] .stButton:nth-of-type(5) > button:hover {
+    filter: brightness(1.1);
+}
